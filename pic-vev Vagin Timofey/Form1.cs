@@ -83,5 +83,34 @@ namespace pic_vev_Vagin_Timofey
             else
                 pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
         }
+
+        private void нормализироватьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
+        }
+
+        private void сжатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void изменитьЦветToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Show the color dialog box. If the user clicks OK, change the
+            // PictureBox control's background to the color the user chose.
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+                pictureBox1.BackColor = colorDialog1.Color;
+        }
+
+        private void цветФонаПоУмолчаниюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = default;
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox = new AboutBox1();
+            aboutBox.Show();
+        }
     }
 }
